@@ -1,0 +1,337 @@
+$bronze: #130d0a;
+$white: #fff;
+$coverheight: calc(150vw - 30px);
+$navpadding: 1vw;
+
+body {
+	padding: 0;
+	margin: 0;
+	background-color: black;
+	font-family: "Trebuchet MS", "Helvetica";
+	color: $white;
+}
+
+.container {
+	width: 65%;
+	margin: auto auto;
+}
+
+#cover {
+	height: $coverheight;
+	overflow: visible;
+	//position: relative;
+	max-width: 100%;
+	margin: 0 auto;
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	position: relative;
+}
+#content {
+	background-color: white;
+	color: black;
+}
+.layer {
+	width: 100vw;
+	height: $coverheight;
+	position: absolute;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+#cover,
+.layer {
+	width: 100%;
+	text-align: center;
+}
+
+#cover-mobile {
+	display: none;
+	background: url("./img/ggb_background.JPG") no-repeat center bottom / cover;
+	height: 320px;
+}
+
+.text-header {
+	font-size: 50px;
+	text-align: center;
+}
+
+.parallax {
+	transform-origin: top;
+}
+
+.img {
+	max-width: 100%;
+	min-height: 100vh;
+	object-fit: contain;
+	position: absolute;
+	top: 0;
+}
+
+#img-bg {
+	background-image: url("./img/ggb_background.JPG");
+	//background-position: top center;
+	z-index: -2;
+}
+
+#img-cutout {
+	background-image: url("./img/ggb_cutout.png");
+	//background-position: top center;
+	z-index: 0;
+}
+
+//title
+.title {
+	width: 100%;
+	position: fixed;
+	top: 25vh;
+
+	justify-content: center;
+
+	z-index: -1;
+}
+
+.title h1 {
+	font-size: 11vw;
+}
+
+.title-container {
+	width: fit-content;
+	margin: auto;
+	text-align: left;
+}
+
+.title h1 {
+	margin: 16px;
+}
+
+//sidebar
+.text-wrap {
+	height: 100vh;
+	display: flex;
+
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+
+	background-color: green;
+}
+
+.sideline {
+	position: absolute;
+	top: calc(50vh - 111px - 7px);
+	left: calc(50vw + 0px);
+	height: 222px;
+	width: 3px;
+	background-color: orange;
+
+	transform: scaleY(0);
+	transform-origin: top center;
+	z-index: 1;
+}
+
+.text {
+	font-size: 30px;
+	height: 50px;
+	text-transform: uppercase;
+	color: white;
+	transform-origin: left center;
+	transform: rotate(0.1deg);
+}
+
+.wrapper {
+	width: 100%;
+}
+
+//sections
+.section {
+	min-height: 100vh;
+
+	padding: 24px 32px;
+	background-color: white;
+}
+
+#about {
+	background-color: lavender;
+}
+
+#projects {
+	background-color: white;
+}
+
+#experience {
+	background-color: lavender;
+}
+
+#reviews {
+	background-color: white;
+}
+
+//navbar
+nav a:link {
+	color: white;
+}
+
+nav a:visited {
+	color: white;
+}
+
+nav a:active {
+	position: relative;
+	bottom: -2px;
+}
+
+// navbar
+.navbar {
+	width: 100%;
+	display: flex;
+	position: fixed;
+	top: 0;
+	z-index: -3;
+
+	padding-left: $navpadding;
+}
+
+.navbar li {
+	padding: 5px 10px;
+	display: inline;
+	float: right;
+}
+
+.nav-links {
+	width: 30%;
+}
+
+.navbar a {
+	text-decoration: none;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	padding: 5px 2px;
+
+	/*border-radius: 5px;*/
+}
+
+.navbar li:hover {
+	border-bottom-color: white;
+}
+
+.navbar li a:hover {
+	color: lavender;
+}
+
+.nav-links {
+	margin-left: auto;
+	margin-right: $navpadding;
+}
+
+//social media buttons
+.social-buttons {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 32px auto;
+
+	&__button {
+		margin: 10px 5px 0;
+	}
+}
+
+$social-button-size: 60px;
+$social-button-icon-size: 0.4;
+$social-button-background: #fff;
+$social-button-active-color: #fff;
+$social-button-transition-time: 0.3s;
+
+$social-button-colors: (
+	"mail": #0072c6,
+	"facebook": #3b5999,
+	"linkedin": #0077b5,
+	"github": #6e5494,
+	"codepen": #212121,
+	"steam": #7da10e,
+	"snapchat": #eec900,
+	"twitter": #55acee,
+	"instagram": #e4405f,
+	"npmjs": #c12127,
+	"spotify": #1db954,
+);
+
+.social-button {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	outline: none;
+	width: $social-button-size;
+	height: $social-button-size;
+	text-decoration: none;
+	border-radius: 100%;
+	background: $social-button-background;
+	text-align: center;
+	margin: 0 12px;
+
+	&::after {
+		content: "";
+		position: absolute;
+		top: -1px;
+		left: 50%;
+		display: block;
+		width: 0;
+		height: 0;
+		border-radius: 100%;
+		transition: $social-button-transition-time;
+	}
+
+	&:focus,
+	&:hover {
+		color: $social-button-active-color;
+
+		&::after {
+			width: calc(100% + 2px);
+			height: calc(100% + 2px);
+			margin-left: calc(-50% - 1px);
+		}
+	}
+
+	i,
+	svg {
+		position: relative;
+		z-index: 1;
+		transition: $social-button-transition-time;
+	}
+
+	i {
+		font-size: $social-button-size * $social-button-icon-size;
+	}
+
+	svg {
+		height: percentage($social-button-icon-size);
+		width: percentage($social-button-icon-size);
+	}
+
+	@each $name, $color in $social-button-colors {
+		&--#{$name} {
+			color: $color;
+
+			&::after {
+				background: $color;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.layer-1 {
+		background-position: 26% bottom;
+	}
+	.layer-3 {
+		background-position: 35% bottom;
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	.section-header {
+		position: inherit;
+	}
+}
