@@ -66,51 +66,51 @@ tl.to(".parallax", {
 // 	});
 // });
 
-gsap.set(".content:not(.initial)", { autoAlpha: 0 });
+// gsap.set(".content:not(.initial)", { autoAlpha: 0 });
 
-var headlines = gsap.utils.toArray(".text");
+// var headlines = gsap.utils.toArray(".text");
 
-var totalDuration = 1000;
-var singleDuration = totalDuration / headlines.length;
+// var totalDuration = 1000;
+// var singleDuration = totalDuration / headlines.length;
 
-const lineTimeline = gsap.timeline();
+// const lineTimeline = gsap.timeline();
 
-ScrollTrigger.create({
-	trigger: ".pin-up",
-	start: "top top",
-	end: "+=" + totalDuration,
-	//markers: true,
-	pin: true,
-	scrub: true,
-	animation: lineTimeline,
-	markers: true,
-});
+// ScrollTrigger.create({
+// 	trigger: ".pin-up",
+// 	start: "top top",
+// 	end: "+=" + totalDuration,
+// 	//markers: true,
+// 	pin: true,
+// 	scrub: true,
+// 	animation: lineTimeline,
+// 	markers: true,
+// });
 
-lineTimeline
-	.to(".sideline", { duration: 1 }, 0)
-	.to(".sideline", { duration: 0.9, scaleY: 1, ease: "none" }, 0);
+// lineTimeline
+// 	.to(".sideline", { duration: 1 }, 0)
+// 	.to(".sideline", { duration: 0.9, scaleY: 1, ease: "none" }, 0);
 
-headlines.forEach((elem, i) => {
-	const smallTimeline = gsap.timeline();
+// headlines.forEach((elem, i) => {
+// 	const smallTimeline = gsap.timeline();
 
-	const content = document.querySelector(".content-wrap");
-	const relevantContent = content.querySelector(".content-" + i);
+// 	const content = document.querySelector(".content-wrap");
+// 	const relevantContent = content.querySelector(".content-" + i);
 
-	ScrollTrigger.create({
-		trigger: ".wrapper",
+// 	ScrollTrigger.create({
+// 		trigger: ".wrapper",
 
-		start: "top -=" + singleDuration * i,
-		end: "+=" + singleDuration,
+// 		start: "top -=" + singleDuration * i,
+// 		end: "+=" + singleDuration,
 
-		//markers: true,
+// 		//markers: true,
 
-		animation: smallTimeline,
-		toggleActions: relevantContent.classList.contains("remaining")
-			? "play none play reverse"
-			: "play reverse play reverse",
-	});
+// 		animation: smallTimeline,
+// 		toggleActions: relevantContent.classList.contains("remaining")
+// 			? "play none play reverse"
+// 			: "play reverse play reverse",
+// 	});
 
-	smallTimeline
-		.to(elem, { duration: 0.25, color: "orange", scale: 1.25, ease: "none" }, 0)
-		.set(relevantContent, { autoAlpha: 1 }, 0.125);
-});
+// 	smallTimeline
+// 		.to(elem, { duration: 0.25, color: "orange", scale: 1.25, ease: "none" }, 0)
+// 		.set(relevantContent, { autoAlpha: 1 }, 0.125);
+// });

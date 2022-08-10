@@ -1,5 +1,4 @@
-$bronze: #130d0a;
-$white: #fff;
+$lavenderblue: #d2daf0;
 $coverheight: calc(150vw - 30px);
 $navpadding: 1vw;
 
@@ -8,11 +7,10 @@ body {
 	margin: 0;
 	background-color: black;
 	font-family: "Trebuchet MS", "Helvetica";
-	color: $white;
 }
 
 .container {
-	width: 65%;
+	width: 70%;
 	margin: auto auto;
 }
 
@@ -60,6 +58,7 @@ body {
 	transform-origin: top;
 }
 
+//img
 .img {
 	max-width: 100%;
 	min-height: 100vh;
@@ -78,6 +77,23 @@ body {
 	background-image: url("./img/ggb_cutout.png");
 	//background-position: top center;
 	z-index: 0;
+}
+
+.pfp-container {
+	overflow: hidden;
+	position: relative;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+#pfp {
+	background-image: url("./img/chris pfp.jpeg");
+	height: 100%;
+	width: auto;
+	max-width: 100%;
+
+	object-fit: cover;
+	object-position: center;
 }
 
 //title
@@ -99,6 +115,7 @@ body {
 	width: fit-content;
 	margin: auto;
 	text-align: left;
+	color: white;
 }
 
 .title h1 {
@@ -148,15 +165,15 @@ body {
 	min-height: 100vh;
 
 	padding: 24px 32px;
-	background-color: white;
+	background-color: aliceblue;
 }
 
 #about {
-	background-color: lavender;
+	background-color: lightsteelblue;
 }
 
 #projects {
-	background-color: white;
+	background-color: $lavenderblue;
 }
 
 #experience {
@@ -164,7 +181,50 @@ body {
 }
 
 #reviews {
-	background-color: white;
+	background-color: #e2e2ef;
+}
+
+#footer {
+	background-color: gainsboro;
+}
+
+#footer p {
+	padding: 8px;
+	margin: 0;
+}
+
+.spacer {
+	margin-top: 32px;
+}
+
+.hidden {
+	display: none;
+}
+
+//card
+.location-footer {
+	text-align: right;
+}
+
+.more {
+	display: none;
+}
+
+.card {
+	border: none;
+	border-color: none;
+}
+
+.card-text {
+	margin: 0;
+}
+
+.card-link {
+	cursor: pointer;
+}
+
+.card-spacer {
+	margin-top: 16px;
 }
 
 //navbar
@@ -255,6 +315,7 @@ $social-button-colors: (
 	"instagram": #e4405f,
 	"npmjs": #c12127,
 	"spotify": #1db954,
+	"resume": #3a364d,
 );
 
 .social-button {
@@ -269,7 +330,7 @@ $social-button-colors: (
 	border-radius: 100%;
 	background: $social-button-background;
 	text-align: center;
-	margin: 0 12px;
+	margin: 16 12px;
 
 	&::after {
 		content: "";
@@ -321,12 +382,29 @@ $social-button-colors: (
 	}
 }
 
+#resume-btn {
+	width: 150px;
+	border-radius: 30px;
+	justify-content: center;
+
+	&::after {
+		border-radius: 30px;
+	}
+}
+
 @media only screen and (max-width: 768px) {
 	.layer-1 {
 		background-position: 26% bottom;
 	}
 	.layer-3 {
 		background-position: 35% bottom;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.container {
+		width: 100%;
+		margin: auto auto;
 	}
 }
 

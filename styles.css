@@ -3,11 +3,10 @@ body {
   margin: 0;
   background-color: black;
   font-family: "Trebuchet MS", "Helvetica";
-  color: #fff;
 }
 
 .container {
-  width: 65%;
+  width: 70%;
   margin: auto auto;
 }
 
@@ -75,6 +74,24 @@ body {
   z-index: 0;
 }
 
+.pfp-container {
+  overflow: hidden;
+  position: relative;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+#pfp {
+  background-image: url("./img/chris pfp.jpeg");
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
 .title {
   width: 100%;
   position: fixed;
@@ -93,6 +110,7 @@ body {
   width: fit-content;
   margin: auto;
   text-align: left;
+  color: white;
 }
 
 .title h1 {
@@ -136,15 +154,15 @@ body {
 .section {
   min-height: 100vh;
   padding: 24px 32px;
-  background-color: white;
+  background-color: aliceblue;
 }
 
 #about {
-  background-color: lavender;
+  background-color: lightsteelblue;
 }
 
 #projects {
-  background-color: white;
+  background-color: #d2daf0;
 }
 
 #experience {
@@ -152,7 +170,49 @@ body {
 }
 
 #reviews {
-  background-color: white;
+  background-color: #e2e2ef;
+}
+
+#footer {
+  background-color: gainsboro;
+}
+
+#footer p {
+  padding: 8px;
+  margin: 0;
+}
+
+.spacer {
+  margin-top: 32px;
+}
+
+.hidden {
+  display: none;
+}
+
+.location-footer {
+  text-align: right;
+}
+
+.more {
+  display: none;
+}
+
+.card {
+  border: none;
+  border-color: none;
+}
+
+.card-text {
+  margin: 0;
+}
+
+.card-link {
+  cursor: pointer;
+}
+
+.card-spacer {
+  margin-top: 16px;
 }
 
 nav a:link {
@@ -231,7 +291,7 @@ nav a:active {
   border-radius: 100%;
   background: #fff;
   text-align: center;
-  margin: 0 12px;
+  margin: 16 12px;
 }
 .social-button::after {
   content: "";
@@ -331,6 +391,21 @@ nav a:active {
 .social-button--spotify::after {
   background: #1db954;
 }
+.social-button--resume {
+  color: #3a364d;
+}
+.social-button--resume::after {
+  background: #3a364d;
+}
+
+#resume-btn {
+  width: 150px;
+  border-radius: 30px;
+  justify-content: center;
+}
+#resume-btn::after {
+  border-radius: 30px;
+}
 
 @media only screen and (max-width: 768px) {
   .layer-1 {
@@ -338,6 +413,12 @@ nav a:active {
   }
   .layer-3 {
     background-position: 35% bottom;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    margin: auto auto;
   }
 }
 @media only screen and (max-width: 900px) {
