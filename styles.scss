@@ -68,7 +68,7 @@ body {
 }
 
 #img-bg {
-	background-image: url("./img/ggb_background.JPG");
+	background-image: url("./img/ggb\ bg\ compressed.jpg");
 	//background-position: top center;
 	z-index: -2;
 }
@@ -186,6 +186,7 @@ body {
 
 #footer {
 	background-color: gainsboro;
+	text-align: center;
 }
 
 #footer p {
