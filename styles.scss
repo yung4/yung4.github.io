@@ -1,6 +1,8 @@
 $lavenderblue: #d2daf0;
 $coverheight: calc(150vw - 30px);
 $navpadding: 1vw;
+$coverradius: 15px;
+$offset: -30px;
 
 body {
 	padding: 0;
@@ -24,10 +26,18 @@ body {
 	text-align: center;
 	justify-content: center;
 	position: relative;
+	border-radius: 0 0 $coverradius $coverradius;
 }
 #content {
 	background-color: white;
 	color: black;
+	position: relative;
+	top: $offset;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-image: url(./img/sf_ocean.jpg);
 }
 .layer {
 	width: 100vw;
@@ -35,6 +45,7 @@ body {
 	position: absolute;
 	background-size: 100%;
 	background-repeat: no-repeat;
+	border-radius: 0 0 $coverradius $coverradius;
 }
 
 #cover,
@@ -76,7 +87,7 @@ body {
 #img-cutout {
 	background-image: url("./img/ggb_cutout.png");
 	//background-position: top center;
-	z-index: 0;
+	z-index: 2;
 }
 
 .pfp-container {
@@ -162,31 +173,48 @@ body {
 
 //sections
 .section {
-	min-height: 100vh;
+	//min-height: 100vh;
 
 	padding: 24px 32px;
-	background-color: aliceblue;
+	//background-color: lightgrey;
 }
 
-#about {
-	background-color: lightsteelblue;
+.section-header {
+	color: white;
+	font-weight: 300;
+	text-align: center;
+	margin-top: 32px;
+	margin-bottom: 16px;
 }
 
-#projects {
-	background-color: $lavenderblue;
+#about-header {
+	margin-top: 56px;
 }
 
-#experience {
-	background-color: lavender;
-}
+// #about {
+// 	background-color: ghostwhite; //lightsteelblue;
+// 	background-image: url(./img/tahoe_sunset.jpg);
+// }
 
-#reviews {
-	background-color: #e2e2ef;
-}
+// #projects {
+// 	background-color: ghostwhite; //$lavenderblue;
+// 	background-image: url(./img/japan_lake.JPEG);
+// }
+
+// #experience {
+// 	background-color: ghostwhite; //lavender;
+// 	background-image: url(./img/sf_ocean.jpg);
+// }
+
+// #reviews {
+// 	background-color: ghostwhite; //#e2e2ef;
+// }
 
 #footer {
 	background-color: gainsboro;
 	text-align: center;
+	position: relative;
+	top: -$offset;
 }
 
 #footer p {
@@ -228,62 +256,9 @@ body {
 	margin-top: 16px;
 }
 
-//navbar
-nav a:link {
-	color: white;
-}
-
-nav a:visited {
-	color: white;
-}
-
-nav a:active {
-	position: relative;
-	bottom: -2px;
-}
-
-// navbar
-.navbar {
-	width: 100%;
-	display: flex;
-	position: fixed;
-	top: 0;
-	z-index: -3;
-
-	padding-left: $navpadding;
-}
-
-.navbar li {
-	padding: 5px 10px;
-	display: inline;
-	float: right;
-}
-
-.nav-links {
-	width: 30%;
-}
-
-.navbar a {
-	text-decoration: none;
-	display: block;
-	text-align: center;
-	text-decoration: none;
-	padding: 5px 2px;
-
-	/*border-radius: 5px;*/
-}
-
-.navbar li:hover {
-	border-bottom-color: white;
-}
-
-.navbar li a:hover {
-	color: lavender;
-}
-
-.nav-links {
-	margin-left: auto;
-	margin-right: $navpadding;
+.card-footer {
+	border: none;
+	background-color: lavender;
 }
 
 //social media buttons

@@ -19,11 +19,19 @@ body {
   text-align: center;
   justify-content: center;
   position: relative;
+  border-radius: 0 0 15px 15px;
 }
 
 #content {
   background-color: white;
   color: black;
+  position: relative;
+  top: -30px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: url(./img/sf_ocean.jpg);
 }
 
 .layer {
@@ -32,6 +40,7 @@ body {
   position: absolute;
   background-size: 100%;
   background-repeat: no-repeat;
+  border-radius: 0 0 15px 15px;
 }
 
 #cover,
@@ -71,7 +80,7 @@ body {
 
 #img-cutout {
   background-image: url("./img/ggb_cutout.png");
-  z-index: 0;
+  z-index: 2;
 }
 
 .pfp-container {
@@ -152,30 +161,26 @@ body {
 }
 
 .section {
-  min-height: 100vh;
   padding: 24px 32px;
-  background-color: aliceblue;
 }
 
-#about {
-  background-color: lightsteelblue;
+.section-header {
+  color: white;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 32px;
+  margin-bottom: 16px;
 }
 
-#projects {
-  background-color: #d2daf0;
-}
-
-#experience {
-  background-color: lavender;
-}
-
-#reviews {
-  background-color: #e2e2ef;
+#about-header {
+  margin-top: 56px;
 }
 
 #footer {
   background-color: gainsboro;
   text-align: center;
+  position: relative;
+  top: 30px;
 }
 
 #footer p {
@@ -216,58 +221,9 @@ body {
   margin-top: 16px;
 }
 
-nav a:link {
-  color: white;
-}
-
-nav a:visited {
-  color: white;
-}
-
-nav a:active {
-  position: relative;
-  bottom: -2px;
-}
-
-.navbar {
-  width: 100%;
-  display: flex;
-  position: fixed;
-  top: 0;
-  z-index: -3;
-  padding-left: 1vw;
-}
-
-.navbar li {
-  padding: 5px 10px;
-  display: inline;
-  float: right;
-}
-
-.nav-links {
-  width: 30%;
-}
-
-.navbar a {
-  text-decoration: none;
-  display: block;
-  text-align: center;
-  text-decoration: none;
-  padding: 5px 2px;
-  /*border-radius: 5px;*/
-}
-
-.navbar li:hover {
-  border-bottom-color: white;
-}
-
-.navbar li a:hover {
-  color: lavender;
-}
-
-.nav-links {
-  margin-left: auto;
-  margin-right: 1vw;
+.card-footer {
+  border: none;
+  background-color: lavender;
 }
 
 .social-buttons {

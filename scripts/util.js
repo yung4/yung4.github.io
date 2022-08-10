@@ -23,3 +23,31 @@ function expandCoursework() {
 		expandButton.innerHTML = "Hide";
 	}
 }
+
+function randomBackground() {
+	const images = [
+		"./img/tahoe_sunset.jpg",
+		"./img/japan_lake.JPEG",
+		"./img/sf_ocean.jpg",
+	];
+
+	var randInt = Math.floor(Math.random() * images.length);
+
+	console.log(randInt);
+
+	const background = images[randInt];
+
+	console.log(background);
+
+	return background;
+}
+
+function setRandomBackground() {
+	const background = document.getElementById("content");
+
+	console.log(background);
+
+	const image = randomBackground();
+
+	background.style.backgroundImage = `url(${image})`;
+}
