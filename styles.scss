@@ -211,8 +211,8 @@ body {
 // }
 
 #footer {
-	background-color: gainsboro;
-	text-align: center;
+	background-color: white;
+	text-align: right;
 	position: relative;
 	top: -$offset;
 }
@@ -220,6 +220,7 @@ body {
 #footer p {
 	padding: 8px;
 	margin: 0;
+	font-size: small;
 }
 
 .spacer {
@@ -359,7 +360,7 @@ $social-button-colors: (
 }
 
 #resume-btn {
-	width: 150px;
+	width: 200px;
 	border-radius: 30px;
 	justify-content: center;
 
