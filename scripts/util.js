@@ -25,17 +25,14 @@ function expandCoursework() {
 }
 
 function randomBackground() {
-	const images = [
-		"./img/tahoe_sunset.jpg",
-		"./img/japan_lake.JPEG",
-		"./img/sf_ocean.jpg",
-	];
+	const url = "./img/backgrounds/";
+	const images = ["tahoe_sunset.jpg", "japan_lake.JPEG", "sf_ocean.jpg"];
 
 	var randInt = Math.floor(Math.random() * images.length);
 
 	console.log(randInt);
 
-	const background = images[randInt];
+	const background = url + images[randInt];
 
 	console.log(background);
 

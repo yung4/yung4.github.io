@@ -5,6 +5,10 @@ body {
   font-family: "Trebuchet MS", "Helvetica";
 }
 
+h1 {
+  font-size: 5rem;
+}
+
 .container {
   width: 70%;
   margin: auto auto;
@@ -19,14 +23,12 @@ body {
   text-align: center;
   justify-content: center;
   position: relative;
-  border-radius: 0 0 15px 15px;
 }
 
 #content {
   background-color: white;
   color: black;
   position: relative;
-  top: -30px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -40,28 +42,12 @@ body {
   position: absolute;
   background-size: 100%;
   background-repeat: no-repeat;
-  border-radius: 0 0 15px 15px;
-}
-
-#cover,
-.layer {
-  width: 100%;
-  text-align: center;
-}
-
-#cover-mobile {
-  display: none;
-  background: url("./img/ggb_background.JPG") no-repeat center bottom/cover;
-  height: 320px;
+  transform-origin: top;
 }
 
 .text-header {
   font-size: 50px;
   text-align: center;
-}
-
-.parallax {
-  transform-origin: top;
 }
 
 .img {
@@ -83,24 +69,6 @@ body {
   z-index: 2;
 }
 
-.pfp-container {
-  overflow: hidden;
-  position: relative;
-  background-size: 100%;
-  background-repeat: no-repeat;
-}
-
-#pfp {
-  background-image: url("./img/chris pfp.jpeg");
-  height: 100%;
-  width: auto;
-  max-width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-}
-
 .title {
   width: 100%;
   position: fixed;
@@ -111,6 +79,7 @@ body {
 
 .title h1 {
   font-size: 11vw;
+  margin: 16px;
 }
 
 .title-container {
@@ -120,44 +89,6 @@ body {
   margin: auto;
   text-align: left;
   color: white;
-}
-
-.title h1 {
-  margin: 16px;
-}
-
-.text-wrap {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  background-color: green;
-}
-
-.sideline {
-  position: absolute;
-  top: calc(50vh - 111px - 7px);
-  left: calc(50vw + 0px);
-  height: 222px;
-  width: 3px;
-  background-color: orange;
-  transform: scaleY(0);
-  transform-origin: top center;
-  z-index: 1;
-}
-
-.text {
-  font-size: 30px;
-  height: 50px;
-  text-transform: uppercase;
-  color: white;
-  transform-origin: left center;
-  transform: rotate(0.1deg);
-}
-
-.wrapper {
-  width: 100%;
 }
 
 .section {
@@ -172,15 +103,60 @@ body {
   margin-bottom: 16px;
 }
 
+.about {
+  background-color: #483d8b;
+  color: white;
+  min-height: 100vh;
+  justify-content: center;
+}
+
+.about h1 {
+  font-size: 5rem;
+}
+
+.about img {
+  height: 400px;
+}
+
 #about-header {
-  margin-top: 56px;
+  padding-top: 10%;
+}
+
+#about-content {
+  padding-top: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blurb {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #483d8b;
+}
+
+.blurb-box {
+  height: 600px;
+  width: 600px;
+  margin: 0 auto;
+  padding: 48px;
+  background-color: white;
+  color: #483d8b;
+  border-radius: 15px;
+}
+
+.blurb h2 {
+  font-size: 2.5em;
+  font-weight: bold;
 }
 
 #footer {
-  background-color: white;
+  background-color: rgb(38, 33, 78);
+  color: white;
   text-align: right;
   position: relative;
-  top: 30px;
 }
 
 #footer p {
@@ -208,6 +184,15 @@ body {
 .card {
   border: none;
   border-color: none;
+  color: white;
+}
+
+.card-body {
+  background-color: #483d8b;
+}
+
+.card-subtitle {
+  color: lavender;
 }
 
 .card-text {
@@ -216,6 +201,7 @@ body {
 
 .card-link {
   cursor: pointer;
+  color: lightskyblue;
 }
 
 .card-spacer {
@@ -224,7 +210,24 @@ body {
 
 .card-footer {
   border: none;
-  background-color: lavender;
+  background-color: rgb(38, 33, 78);
+}
+
+.social-container {
+  height: 0px;
+  width: 100%;
+  position: relative;
+  overflow: visible;
+}
+
+.social-sidebar {
+  position: -webkit-sticky;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  padding-top: 20px;
+  padding-right: 20px;
 }
 
 .social-buttons {
@@ -363,24 +366,4 @@ body {
 }
 #resume-btn::after {
   border-radius: 30px;
-}
-
-@media only screen and (max-width: 768px) {
-  .layer-1 {
-    background-position: 26% bottom;
-  }
-  .layer-3 {
-    background-position: 35% bottom;
-  }
-}
-@media only screen and (max-width: 768px) {
-  .container {
-    width: 100%;
-    margin: auto auto;
-  }
-}
-@media only screen and (max-width: 900px) {
-  .section-header {
-    position: inherit;
-  }
 }/*# sourceMappingURL=styles.css.map */
