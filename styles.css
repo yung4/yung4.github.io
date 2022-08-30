@@ -187,6 +187,7 @@ h1 {
 .card {
   border: none;
   border-color: none;
+  border-radius: 15px;
   color: white;
 }
 
