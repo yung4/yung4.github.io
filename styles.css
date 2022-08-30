@@ -116,14 +116,17 @@ h1 {
 
 .about img {
   height: 400px;
+  margin: 5% 0;
 }
 
 #about-header {
-  padding-top: 10%;
+  padding-top: 7%;
 }
 
 #about-content {
   padding-top: 5%;
+  margin: 0 auto;
+  width: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -138,7 +141,7 @@ h1 {
 }
 
 .blurb-box {
-  height: 600px;
+  height: auto;
   width: 600px;
   margin: 0 auto;
   padding: 48px;
@@ -225,7 +228,7 @@ h1 {
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 1;
+  z-index: -3;
   padding-top: 20px;
   padding-right: 20px;
 }
@@ -366,4 +369,24 @@ h1 {
 }
 #resume-btn::after {
   border-radius: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+  .layer-1 {
+    background-position: 26% bottom;
+  }
+  .layer-3 {
+    background-position: 35% bottom;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    margin: auto auto;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .section-header {
+    position: inherit;
+  }
 }/*# sourceMappingURL=styles.css.map */

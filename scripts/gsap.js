@@ -3,9 +3,8 @@
 // const tl = gsap.timeline({
 // 	scrollTrigger: {
 // 		trigger: "#cover",
-// 		// start: "top top",
-// 		// end: coverHeight,
-// 		// endTrigger: "#img-bg",
+// 		start: "top top",
+// 		end: "bottom bottom",
 // 		scrub: true,
 // 		pin: true,
 // 		markers: true,
@@ -58,6 +57,20 @@
 // tl.fromTo("#hidden-trigger", { height: "5550px" }, { height: "75%" }, 0);
 // tl.fromTo(".parallax", { scale: 10 }, { scale: 1 }, 0);
 
+//make social links appear after cover
+const socialLinks = document.querySelector(".social-container");
+console.log(socialLinks);
+const tl = gsap.timeline({
+	scrollTrigger: {
+		trigger: "#content",
+		start: "-=10%",
+		end: "-=5%",
+		scrub: true,
+	},
+});
+tl.fromTo(socialLinks, { "z-index": -3 }, { "z-index": 1, duration: 1 });
+
+//section snapping
 gsap.utils.toArray(".section").forEach((panel, i) => {
 	gsap.from(panel, {
 		scrollTrigger: {
