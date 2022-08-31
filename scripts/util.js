@@ -24,27 +24,27 @@ function expandCoursework() {
 	}
 }
 
-function randomBackground() {
-	const url = "./img/backgrounds/";
-	const images = ["tahoe_sunset.jpg", "japan_lake.JPEG", "sf_ocean.jpg"];
+// function randomBackground() {
+// 	const url = "./img/backgrounds/";
+// 	const images = ["tahoe_sunset.jpg", "japan_lake.JPEG", "sf_ocean.jpg"];
 
-	var randInt = Math.floor(Math.random() * images.length);
+// 	var randInt = Math.floor(Math.random() * images.length);
 
-	console.log(randInt);
+// 	console.log(randInt);
 
-	const background = url + images[randInt];
+// 	const background = url + images[randInt];
 
-	console.log(background);
+// 	console.log(background);
 
-	return background;
-}
+// 	return background;
+// }
 
-function setRandomBackground() {
-	const background = document.getElementById("content");
+// function setRandomBackground() {
+// 	const background = document.getElementById("content");
 
-	console.log(background);
+// 	console.log(background);
 
-	const image = randomBackground();
+// 	const image = randomBackground();
 
-	background.style.backgroundImage = `url(${image})`;
-}
+// 	background.style.backgroundImage = `url(${image})`;
+// }
