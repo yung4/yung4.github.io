@@ -6,7 +6,7 @@ body {
 }
 
 h1 {
-  font-size: 5rem;
+  font-size: 5em;
 }
 
 .container {
@@ -89,6 +89,17 @@ h1 {
 .section {
   min-height: 100vh;
   padding: 24px 32px;
+  background-color: #483d8b;
+  color: white;
+  min-height: 100vh;
+  justify-content: center;
+  position: relative;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .section-header {
@@ -97,17 +108,6 @@ h1 {
   text-align: center;
   margin-top: 32px;
   margin-bottom: 16px;
-}
-
-.about {
-  background-color: #483d8b;
-  color: white;
-  min-height: 100vh;
-  justify-content: center;
-}
-
-.about h1 {
-  font-size: 5rem;
 }
 
 .about img {
