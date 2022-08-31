@@ -126,92 +126,59 @@
 				</div>
 			</div>
 
-			<div class="section" id="projects">
-				<h1 class="section-header">Projects</h1>
-
-				<div class="container">
-					<div class="card">
+			<div class="section about">
+				<div class="row" id="about-content">
+					<div class="col-lg" id="about-img">
 						<img
-							src="./img/previews/personal website preview.jpg"
-							class="card-img-top"
-							alt="website preview"
+							src="./img/previews/spotistics preview screen white.png"
+							class="rounded mx-auto d-block"
+							alt="spotistics preview screen"
 						/>
-						<div class="card-body">
-							<h5 class="card-title">yung4.github.io</h5>
-							<h6 class="card-subtitle mb-2 text-muted">Personal Website</h6>
-							<p class="card-text">
-								This website is a fun digital portfolio about myself and what I
-								have done
-							</p>
-							<ul class="card-text more" id="website">
-								<li>
-									Written in HTML, SCSS, and JavaScript with Bootstrap styling
-								</li>
-								<li>
-									Randomly sets the background image from a selection of my
-									favorite landscape/sunset photography (reload the page or
-									click the link below to try it out!)
-								</li>
-								<li>
-									probably would have been easier to have just done a react app,
-									but wanted to practice my HTML, SCSS, and JavaScript
-								</li>
-							</ul>
-
-							<a onclick="expand('website')" class="card-link" id="btn-website">
-								more
-							</a>
-						</div>
-						<div class="card-footer">
-							<a href="" class="card-link"> /recursion </a>
-						</div>
 					</div>
 
-					<div class="spacer"></div>
+					<div class="col-lg" id="about-description">
+						<h1>Spotistics</h1>
 
-					<div class="card">
-						<img
-							src="./img/previews/spotistics preview.png"
-							class="card-img-top"
-							alt="website preview"
-						/>
-						<div class="card-body">
-							<h5 class="card-title">Spotistics</h5>
-							<h6 class="card-subtitle mb-2 text-muted">Web Application</h6>
-							<p class="card-text">
-								Spotistics, a portmanteau of Spotify and Statistics, is a
-								client-side React web application that analyzes a user's Spotify
-								listening habits
-							</p>
-							<ul class="card-text more" id="spotistics">
-								<li>
-									Requests OAuth access token from Spotify API via implicit
-									grant flow for authorization to grab a user's Spotify data
-								</li>
-								<li>
-									Queries the Spotify API using AJAX and aggregates the returned
-									JSON data for analysis
-								</li>
-								<li>
-									Utilizes the ChartJS library to animate graphs to display
-									user's playlists statistics visually
-								</li>
-								<li>
-									React application written in JavaScript using the
-									Bootstrap-React framework and deployed via Github Pages
-								</li>
-							</ul>
+						<div class="spacer"></div>
 
-							<a
-								onclick="expand('spotistics')"
-								class="card-link"
-								id="btn-spotistics"
-							>
-								more
-							</a>
-						</div>
-						<div class="card-footer">
-							<a
+						<h3>
+							Spotistics, a portmanteau of Spotify and Statistics, is my own
+							client-side React web application that analyzes a user's Spotify
+							listening habits
+						</h3>
+
+						<div class="spacer"></div>
+
+						<h3>
+							Built with Javascript, React, Bootstrap-React, Ajax, ChartJS and
+							deployed using Github Pages
+						</h3>
+
+							<a href="" class="card-link"> /recursion </a>
+					</div>
+				</div>
+			</div>
+
+			<div class="section about">
+				<div class="row" id="about-content">
+					<div class="col-lg" id="about-description">
+						<h1>Personal Website</h1>
+
+						<div class="spacer"></div>
+
+						<h3>
+							This website is a fun digital portfolio about myself and what I
+							have done
+						</h3>
+
+						<div class="spacer"></div>
+
+						<h3>
+							Built with HTML, SCSS, Javscript, Bootstrap, and deployed using
+							Github Pages
+						</h3>
+
+						<a
 								target="_blank"
 								rel="noopener noreferrer"
 								href="https://yung4.github.io/spotistics/"
@@ -219,214 +186,237 @@
 							>
 								/yung4.github.io/spotistics
 							</a>
-						</div>
 					</div>
 
-					<div class="spacer"></div>
-
-					<div class="card">
-						<div class="card-body">
-							<h5 class="card-title">Purcle</h5>
-							<h6 class="card-subtitle mb-2 text-muted">
-								CS307 Software Engineering I
-							</h6>
-							<p class="card-text">
-								Purcle, a portmanteau of 'Purdue Circle,' is a reddit-like forum
-								for Purdue students to post about different topics built with a
-								React frontend and Python Django backend hosted on Heroku
-							</p>
-							<ul class="card-text more" id="purcle">
-								<li>
-									Allows user to post text or images to a certain topic, where
-									they can follow and view different topic timelines. The user
-									will be able to see posts from their followed topics in their
-									main homepage timeline. Users are able to comment, like, and
-									save posts. Users are also able to direct message, block, and
-									view other users.
-								</li>
-								<li>
-									Uses PostgreSQL as database management for the Django backend
-								</li>
-								<li>
-									Uses Javascript and React with a Bootstrap-React framework for
-									the frontend
-								</li>
-								<li>
-									Django backend serves an API for getting and storing all the
-									data created by Purcle users
-								</li>
-								<li>
-									Frontend calls API using Axios to display data and pass it
-									through different components
-								</li>
-							</ul>
-
-							<a onclick="expand('purcle')" class="card-link" id="btn-purcle">
-								more
-							</a>
-						</div>
-						<div class="card-footer">
-							<a
-								target="_blank"
-								rel="noopener noreferrer"
-								href="https://github.com/ldavid19/Purcle"
-								class="card-link"
-							>
-								/github.com/ldavid19/Purcle/
-							</a>
-						</div>
-					</div>
-
-					<div class="spacer"></div>
-
-					<div class="card">
-						<div class="card-body">
-							<h5 class="card-title">Random Character Selector Game Overlay</h5>
-							<h6 class="card-subtitle mb-2 text-muted">
-								Widget for BoilerMake VIII
-							</h6>
-							<p class="card-text">
-								Valorant Random Agent Select Overlay is a QOL widget for use in
-								video games that can be quickly and easily accessed through
-								Windows Game Bar mid-game
-							</p>
-							<ul class="card-text more" id="boilermakeviii">
-								<li>
-									Built using XAML and C# with the tools Microsoft provides
-									developers
-								</li>
-								<li>
-									Simple random character picker which can be scaled as many
-									games as necessary
-								</li>
-								<li>
-									We originally had a different idea that utilized Windows Game
-									Bar, but we could not feasibly create a working product within
-									the time constraints that we had, so we pivoted to this
-								</li>
-							</ul>
-
-							<a
-								onclick="expand('boilermakeviii')"
-								class="card-link"
-								id="btn-boilermakeviii"
-							>
-								more
-							</a>
-						</div>
-						<div class="card-footer">
-							<a
-								target="_blank"
-								rel="noopener noreferrer"
-								href="https://github.com/yung4/boilermakeviii/"
-								class="card-link"
-							>
-								/github.com/yung4/boilermakeviii/
-							</a>
-						</div>
-					</div>
-
-					<div class="spacer"></div>
-
-					<div class="card">
-						<div class="card-body">
-							<h5 class="card-title">Sustainably Dressed</h5>
-							<h6 class="card-subtitle mb-2 text-muted">
-								Website for BoilerMake VII
-							</h6>
-							<p class="card-text">
-								Sustainably Dressed is a website that aggregates
-								secondhand/thrift clothing listings from various websites into a
-								single page which uses machine learning to more easily allow
-								people to find sources of clothing that have a smaller
-								environmental impact
-							</p>
-							<ul class="card-text more" id="boilermakevii">
-								<li>
-									Wrote a BeautifulSoup Python web scraper that automatically
-									collects listings for second hand clothing
-								</li>
-								<li>
-									Automatically outputs aggregated data onto a single webpage
-									for the user
-								</li>
-								<li>
-									Used Tensorflow to train an AI to be able to identify
-									different types of clothing
-								</li>
-							</ul>
-
-							<a
-								onclick="expand('boilermakevii')"
-								class="card-link"
-								id="btn-boilermakevii"
-							>
-								more
-							</a>
-						</div>
-						<div class="card-footer">
-							<a
-								target="_blank"
-								rel="noopener noreferrer"
-								href="https://github.com/Dan-Yell-Nuwin/ShirtsForLess"
-								class="card-link"
-							>
-								/github.com/Dan-Yell-Nuwin/ShirtsForLess
-							</a>
-						</div>
-					</div>
-
-					<div class="spacer"></div>
-
-					<div class="card">
-						<div class="card-body">
-							<h5 class="card-title">Void Therapy</h5>
-							<h6 class="card-subtitle mb-2 text-muted">
-								Mobile App for Hello World 2019
-							</h6>
-							<p class="card-text">
-								Void Therapy is a mobile game built on the concept of "screaming
-								into the void, but the void screams back" -- a fun twist that
-								allows you to vent frustration and relieve stress by "yelling
-								into the void" and being comforted by the fact that you are not
-								alone
-							</p>
-							<ul class="card-text more" id="helloworld">
-								<li>
-									Made in Android Studio written in Dart on Google's open-source
-									UI SDK Flutter
-								</li>
-								<li>
-									Utilizes Firebase database to store and retrieve
-									messages/rants
-								</li>
-								<li>
-									Features handcrafted animated sprites and levelling system to
-									give the player a sense of progression and accomplishment
-								</li>
-							</ul>
-
-							<a
-								onclick="expand('helloworld')"
-								class="card-link"
-								id="btn-helloworld"
-							>
-								more
-							</a>
-						</div>
-						<div class="card-footer">
-							<a
-								target="_blank"
-								rel="noopener noreferrer"
-								href="https://github.com/yung4/HelloWorld-2-the-squeakquel"
-								class="card-link"
-							>
-								/github.com/yung4/HelloWorld-2-the-squeakquel
-							</a>
-						</div>
+					<div class="col-lg" id="about-img">
+						<img
+							src="./img/previews/website preview screen white.png"
+							class="rounded mx-auto d-block"
+							alt="website preview screen"
+						/>
 					</div>
 				</div>
 			</div>
+
+			<div class="section about">
+				<div class="section-header">
+					<h1>Purcle</h1>
+				</div>
+				<div class="card">
+					<div class="card-body">
+						<h5 class="card-title">Purcle</h5>
+						<h6 class="card-subtitle mb-2 text-muted">
+							CS307 Software Engineering I
+						</h6>
+						<p class="card-text">
+							Purcle, a portmanteau of 'Purdue Circle,' is a reddit-like forum
+							for Purdue students to post about different topics built with a
+							React frontend and Python Django backend hosted on Heroku
+						</p>
+						<ul class="card-text more" id="purcle">
+							<li>
+								Allows user to post text or images to a certain topic, where
+								they can follow and view different topic timelines. The user
+								will be able to see posts from their followed topics in their
+								main homepage timeline. Users are able to comment, like, and
+								save posts. Users are also able to direct message, block, and
+								view other users.
+							</li>
+							<li>
+								Uses PostgreSQL as database management for the Django backend
+							</li>
+							<li>
+								Uses Javascript and React with a Bootstrap-React framework for
+								the frontend
+							</li>
+							<li>
+								Django backend serves an API for getting and storing all the
+								data created by Purcle users
+							</li>
+							<li>
+								Frontend calls API using Axios to display data and pass it
+								through different components
+							</li>
+						</ul>
+
+						<a onclick="expand('purcle')" class="card-link" id="btn-purcle">
+							more
+						</a>
+					</div>
+					<div class="card-footer">
+						<a
+							target="_blank"
+							rel="noopener noreferrer"
+							href="https://github.com/ldavid19/Purcle"
+							class="card-link"
+						>
+							/github.com/ldavid19/Purcle/
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+			</div>
+
+			<div class="section about">
+				<div class="section-header">
+					<h1>Hackathon Projects</h1>
+				</div>
+				
+				<div class="row">
+					<div class="col-lg">
+						<div class="card">
+							<div class="card-body">
+								<h5 class="card-title">
+									Random Character Selector Game Overlay
+								</h5>
+								<h6 class="card-subtitle mb-2 text-muted">
+									Widget for BoilerMake VIII
+								</h6>
+								<p class="card-text">
+									Valorant Random Agent Select Overlay is a QOL widget for use
+									in video games that can be quickly and easily accessed through
+									Windows Game Bar mid-game
+								</p>
+								<ul class="card-text more" id="boilermakeviii">
+									<li>
+										Built using XAML and C# with the tools Microsoft provides
+										developers
+									</li>
+									<li>
+										Simple random character picker which can be scaled as many
+										games as necessary
+									</li>
+									<li>
+										We originally had a different idea that utilized Windows
+										Game Bar, but we could not feasibly create a working product
+										within the time constraints that we had, so we pivoted to
+										this
+									</li>
+								</ul>
+
+								<a
+									onclick="expand('boilermakeviii')"
+									class="card-link"
+									id="btn-boilermakeviii"
+								>
+									more
+								</a>
+							</div>
+							<div class="card-footer">
+								<a
+									target="_blank"
+									rel="noopener noreferrer"
+									href="https://github.com/yung4/boilermakeviii/"
+									class="card-link"
+								>
+									/github.com/yung4/boilermakeviii/
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg">
+						<div class="card">
+							<div class="card-body">
+								<h5 class="card-title">Sustainably Dressed</h5>
+								<h6 class="card-subtitle mb-2 text-muted">
+									Website for BoilerMake VII
+								</h6>
+								<p class="card-text">
+									Sustainably Dressed is a website that aggregates
+									secondhand/thrift clothing listings from various websites into
+									a single page which uses machine learning to more easily allow
+									people to find sources of clothing that have a smaller
+									environmental impact
+								</p>
+								<ul class="card-text more" id="boilermakevii">
+									<li>
+										Wrote a BeautifulSoup Python web scraper that automatically
+										collects listings for second hand clothing
+									</li>
+									<li>
+										Automatically outputs aggregated data onto a single webpage
+										for the user
+									</li>
+									<li>
+										Used Tensorflow to train an AI to be able to identify
+										different types of clothing
+									</li>
+								</ul>
+
+								<a
+									onclick="expand('boilermakevii')"
+									class="card-link"
+									id="btn-boilermakevii"
+								>
+									more
+								</a>
+							</div>
+							<div class="card-footer">
+								<a
+									target="_blank"
+									rel="noopener noreferrer"
+									href="https://github.com/Dan-Yell-Nuwin/ShirtsForLess"
+									class="card-link"
+								>
+									/github.com/Dan-Yell-Nuwin/ShirtsForLess
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg">
+						<div class="card">
+							<div class="card-body">
+								<h5 class="card-title">Void Therapy</h5>
+								<h6 class="card-subtitle mb-2 text-muted">
+									Mobile App for Hello World 2019
+								</h6>
+								<p class="card-text">
+									Void Therapy is a mobile game built on the concept of
+									"screaming into the void, but the void screams back" -- a fun
+									twist that allows you to vent frustration and relieve stress
+									by "yelling into the void" and being comforted by the fact
+									that you are not alone
+								</p>
+								<ul class="card-text more" id="helloworld">
+									<li>
+										Made in Android Studio written in Dart on Google's
+										open-source UI SDK Flutter
+									</li>
+									<li>
+										Utilizes Firebase database to store and retrieve
+										messages/rants
+									</li>
+									<li>
+										Features handcrafted animated sprites and levelling system
+										to give the player a sense of progression and accomplishment
+									</li>
+								</ul>
+
+								<a
+									onclick="expand('helloworld')"
+									class="card-link"
+									id="btn-helloworld"
+								>
+									more
+								</a>
+							</div>
+							<div class="card-footer">
+								<a
+									target="_blank"
+									rel="noopener noreferrer"
+									href="https://github.com/yung4/HelloWorld-2-the-squeakquel"
+									class="card-link"
+								>
+									/github.com/yung4/HelloWorld-2-the-squeakquel
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>	
 
 			<div id="footer">
 				<div>

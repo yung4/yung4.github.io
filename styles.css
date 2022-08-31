@@ -92,6 +92,7 @@ h1 {
 }
 
 .section {
+  min-height: 100vh;
   padding: 24px 32px;
 }
 
@@ -187,16 +188,7 @@ h1 {
 .card {
   border: none;
   border-color: none;
-  border-radius: 15px;
-  color: white;
-}
-
-.card-body {
-  background-color: #483d8b;
-}
-
-.card-subtitle {
-  color: lavender;
+  color: #483d8b;
 }
 
 .card-text {
@@ -205,7 +197,6 @@ h1 {
 
 .card-link {
   cursor: pointer;
-  color: lightskyblue;
 }
 
 .card-spacer {
@@ -214,7 +205,8 @@ h1 {
 
 .card-footer {
   border: none;
-  background-color: rgb(38, 33, 78);
+  border-radius: 15px;
+  background-color: lavender;
 }
 
 .social-container {

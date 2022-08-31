@@ -3,6 +3,7 @@ $primary: #483d8b;
 $darker: rgb(38, 33, 78);
 $coverheight: calc(150vw - 30px);
 $boxsize: 600px;
+$corners: 15px;
 
 body {
 	padding: 0;
@@ -103,7 +104,7 @@ h1 {
 
 //sections
 .section {
-	//min-height: 100vh;
+	min-height: 100vh;
 
 	padding: 24px 32px;
 	//background-color: lightgrey;
@@ -163,7 +164,7 @@ h1 {
 	background-color: white;
 	color: $primary;
 
-	border-radius: 15px;
+	border-radius: $corners;
 }
 
 .blurb h2 {
@@ -218,16 +219,8 @@ h1 {
 .card {
 	border: none;
 	border-color: none;
-	border-radius: 15px;
-	color: white;
-}
-
-.card-body {
-	background-color: $primary;
-}
-
-.card-subtitle {
-	color: lavender;
+	//border-radius: $corners;
+	color: $primary;
 }
 
 .card-text {
@@ -236,7 +229,7 @@ h1 {
 
 .card-link {
 	cursor: pointer;
-	color: lightskyblue;
+	//color: lightskyblue;
 }
 
 .card-spacer {
@@ -245,7 +238,8 @@ h1 {
 
 .card-footer {
 	border: none;
-	background-color: $darker;
+	border-radius: $corners;
+	background-color: lavender;
 }
 
 //social media buttons
