@@ -245,6 +245,7 @@ h1 {
 }
 
 .logo-box {
+	position: relative;
 	background-color: lavender;
 	height: 400px;
 	width: 400px;
@@ -256,6 +257,55 @@ h1 {
 
 .logo-box img {
 	height: 400px;
+	display: block;
+	opacity: 1;
+	width: 100%;
+	height: auto;
+	transition: 0.5s ease;
+	backface-visibility: hidden;
+}
+
+.overlay {
+	transition: 0.5s ease;
+	opacity: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	text-align: center;
+	border-radius: $corners;
+	width: 100%;
+}
+
+.logo-box:hover img {
+	opacity: 0.2;
+}
+
+.logo-box:hover .overlay {
+	opacity: 1;
+}
+
+.logo-description {
+	color: $primary;
+	font-size: 20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.logo-description h2 {
+	font-size: 2em;
+	font-weight: bold;
+}
+
+.logo-description p {
+	font-size: 1em;
+	//font-weight: bold;
 }
 
 #footer {
