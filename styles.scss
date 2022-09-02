@@ -1,11 +1,15 @@
 $lavenderblue: #d2daf0;
 $primary: #483d8b;
 $darker: rgb(38, 33, 78);
+
 $coverheight: calc(150vw - 30px);
 $boxsize: 600px;
+$logosize: 75px;
 $corners: 15px;
 
-//TODO: fix cards to fit new style better
+$titlesize: 11vw;
+
+//TODO: i forgot what i needed to do but there was something
 
 body {
 	padding: 0;
@@ -95,7 +99,7 @@ h1 {
 }
 
 .title h1 {
-	font-size: 11vw;
+	font-size: $titlesize;
 	margin: 16px;
 }
 
@@ -149,14 +153,25 @@ h1 {
 	}
 }
 
+.project-title {
+	margin: 0;
+}
+
+.project-img {
+	margin: 32px auto;
+}
+
 //about section
 .about img {
-	height: 400px;
+	//height: 400px;
+	max-width: 95%;
 	margin: 5% 0;
 }
 
 #about-header {
 	padding-top: 7%;
+	font-size: 0.7em;
+	text-align: center;
 }
 
 #about-content {
@@ -165,10 +180,6 @@ h1 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-}
-
-#about-img {
-	max-width: 90%;
 }
 
 //blurb section
@@ -185,6 +196,7 @@ h1 {
 .blurb-box {
 	height: auto;
 	width: $boxsize;
+	max-width: 80vw;
 	margin: 0 auto;
 	padding: 48px;
 	background-color: white;
@@ -198,27 +210,32 @@ h1 {
 	font-weight: bold;
 }
 
-//purcle section
-.purcle-header {
+//icon titles
+.icon-header {
 	margin-bottom: 32px;
-	display: flex;
-	align-items: flex-start;
+	display: inline-flex;
+	align-items: center;
 	align-content: flex-start;
+	justify-content: center;
 	text-align: left;
 }
 
-.logo-border {
-	width: 100px;
-	height: 100px;
+.icon-border {
+	width: $logosize;
+	height: $logosize;
 	background-color: white;
 	border-radius: 50%;
-	margin: 0 auto;
+	margin-right: 16px;
 }
 
-.logo-border img {
+.icon-border img {
 	width: 100%;
 	height: 100%;
 	scale: 1.2;
+}
+
+#spotistics-icon {
+	background-color: $primary;
 }
 
 //logos section
@@ -447,26 +464,36 @@ $social-button-colors: (
 	.section {
 		width: 95%;
 	}
-}
-
-@media only screen and (max-width: 768px) {
-	.layer-1 {
-		background-position: 26% bottom;
+	.section p {
+		font-size: 1.5em;
 	}
-	.layer-3 {
-		background-position: 35% bottom;
+	.blurb-box {
+		padding: 24px;
 	}
-}
-
-@media only screen and (max-width: 768px) {
-	.container {
-		width: 100%;
-		margin: auto auto;
+	.blurb h2 {
+		font-size: 1.7em;
+		font-weight: bold;
+	}
+	.project-title {
+		text-align: center;
+		font-size: 3.5em;
+	}
+	.title {
+		top: 10vh;
+	}
+	.logo-box img {
+		scale: 0.9;
 	}
 }
 
 @media only screen and (max-width: 900px) {
 	.section-header {
 		position: inherit;
+	}
+}
+
+@media only screen and (max-width: 1200px) {
+	#about-content {
+		padding: 0;
 	}
 }
