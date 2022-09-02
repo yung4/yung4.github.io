@@ -63,7 +63,7 @@ console.log(socialLinks);
 const tl = gsap.timeline({
 	scrollTrigger: {
 		trigger: "#content",
-		start: "-=10%",
+		start: "-=7%",
 		end: "-=5%",
 		scrub: true,
 	},

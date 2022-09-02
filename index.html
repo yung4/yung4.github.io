@@ -31,7 +31,7 @@
 			<div class="img-fluid layer parallax" id="img-cutout"></div>
 		</div>
 
-		<div class="social-container">
+		<div class="social-container web">
 			<div class="social-sidebar">
 				<a
 					class="social-buttons__button social-button social-button--linkedin"
@@ -78,7 +78,7 @@
 					<h1>but you can just call me chris.</h1>
 				</div>
 				<div class="row" id="about-content">
-					<div class="col-lg" id="about-img">
+					<div class="col-lg web" id="about-img">
 						<img
 							src="./img/chris pfp.jpeg"
 							class="rounded mx-auto d-block"
@@ -114,25 +114,37 @@
 				</div>
 			</div>
 
-			<div class="section blurb">
-				<div class="blurb-box">
-					<h2>
-						I have a couple years of experience with building React
-						applications, and am familiar with Typescript, Javascript, API
-						calls, and unit testing. I enjoy design and making web applications
-						as intuitive for the user as possible. Here are some of the projects
-						I have contributed to throughout my college career.
-					</h2>
+			<div class="section blurb centered">
+				<div>
+					<div class="blurb-header"><h1>Projects</h1></div>
+					<div class="blurb-box">
+						<h2>
+							I have a couple years of experience with building React
+							applications, and am familiar with Typescript, Javascript, API
+							calls, and unit testing. I enjoy design and making web
+							applications as intuitive for the user as possible. Here are some
+							of the projects I have contributed to throughout my college
+							career.
+						</h2>
+					</div>
 				</div>
 			</div>
 
 			<div class="section centered">
 				<div class="row">
-					<div class="col-lg">
+					<div class="col-lg web">
 						<img
 							src="./img/previews/spotistics preview screen white.png"
 							class="rounded mx-auto d-block"
 							alt="spotistics preview screen"
+						/>
+					</div>
+
+					<div class="col-lg mobile">
+						<img
+							src="./img/previews/spotistics preview.png"
+							class="rounded mx-auto d-block"
+							alt="spotistics preview mobile"
 						/>
 					</div>
 
@@ -141,54 +153,67 @@
 
 						<div class="spacer"></div>
 
-						<h3>
+						<p>
 							Spotistics, a portmanteau of Spotify and Statistics, is my own
 							client-side React web application that analyzes a user's Spotify
 							listening habits
-						</h3>
+						</p>
 
 						<div class="spacer"></div>
 
-						<h3>
+						<p>
 							Built with Javascript, React, Bootstrap-React, Ajax, ChartJS and
 							deployed using Github Pages
-						</h3>
+						</p>
 
-							<a href="" class="card-link"> /recursion </a>
+						<div class="spacer"></div>
+
+						<p><a href=""> /recursion </a></p>
 					</div>
 				</div>
 			</div>
 
 			<div class="section centered">
 				<div class="row">
+					<div class="col-lg mobile">
+						<img
+							src="./img/previews/personal website preview.jpg"
+							class="rounded mx-auto d-block"
+							alt="website preview mobile"
+						/>
+					</div>
+
 					<div class="col-lg">
 						<h1>Personal Website</h1>
 
 						<div class="spacer"></div>
 
-						<h3>
+						<p>
 							This website is a fun digital portfolio about myself and what I
 							have done
-						</h3>
+						</p>
 
 						<div class="spacer"></div>
 
-						<h3>
+						<p>
 							Built with HTML, SCSS, Javscript, Bootstrap, and deployed using
 							Github Pages
-						</h3>
+						</p>
 
-						<a
+						<div class="spacer"></div>
+
+						<p>
+							<a
 								target="_blank"
 								rel="noopener noreferrer"
 								href="https://yung4.github.io/spotistics/"
-								class="card-link"
 							>
 								/yung4.github.io/spotistics
 							</a>
+						</p>
 					</div>
 
-					<div class="col-lg">
+					<div class="col-lg web">
 						<img
 							src="./img/previews/website preview screen white.png"
 							class="rounded mx-auto d-block"
@@ -198,71 +223,54 @@
 				</div>
 			</div>
 
-			<div class="section">
-				<div class="section-header">
-					<h1>Purcle</h1>
-				</div>
-				<div class="card">
-					<div class="card-body">
-						<h5 class="card-title">Purcle</h5>
-						<h6 class="card-subtitle mb-2 text-muted">
-							CS307 Software Engineering I
-						</h6>
-						<p class="card-text">
+			<div class="section centered">
+				<div>
+					<div class="purcle-header">
+						<div class="logo-border">
+							<img
+								src="./img/logos/purcle logo.png"
+								class="rounded mx-auto d-block"
+								alt="purcle logo"
+							/>
+						</div>
+
+						<h1>Purcle</h1>
+					</div>
+
+					<div>
+						<p>
 							Purcle, a portmanteau of 'Purdue Circle,' is a reddit-like forum
 							for Purdue students to post about different topics built with a
 							React frontend and Python Django backend hosted on Heroku
 						</p>
-						<ul class="card-text more" id="purcle">
-							<li>
-								Allows user to post text or images to a certain topic, where
-								they can follow and view different topic timelines. The user
-								will be able to see posts from their followed topics in their
-								main homepage timeline. Users are able to comment, like, and
-								save posts. Users are also able to direct message, block, and
-								view other users.
-							</li>
-							<li>
-								Uses PostgreSQL as database management for the Django backend
-							</li>
-							<li>
-								Uses Javascript and React with a Bootstrap-React framework for
-								the frontend
-							</li>
-							<li>
-								Django backend serves an API for getting and storing all the
-								data created by Purcle users
-							</li>
-							<li>
-								Frontend calls API using Axios to display data and pass it
-								through different components
-							</li>
-						</ul>
 
-						<a onclick="expand('purcle')" class="card-link" id="btn-purcle">
-							more
-						</a>
-					</div>
-					<div class="card-footer">
-						<a
-							target="_blank"
-							rel="noopener noreferrer"
-							href="https://github.com/ldavid19/Purcle"
-							class="card-link"
-						>
-							/github.com/ldavid19/Purcle/
-						</a>
+						<div class="spacer"></div>
+
+						<p>
+							Built with Javascript, React, Bootstrap-React, Axios, Django,
+							PostgreSQL, and deployed using Heroku
+						</p>
+
+						<div class="spacer"></div>
+
+						<p>
+							<a
+								target="_blank"
+								rel="noopener noreferrer"
+								href="https://github.com/ldavid19/Purcle"
+							>
+								/github.com/ldavid19/Purcle/
+							</a>
+						</p>
 					</div>
 				</div>
 			</div>
-		</div>
-			</div>
 
-			<div class="section">
+			<div class="section hidden">
 				<div class="section-header">
 					<h1>Hackathon Projects</h1>
 				</div>
-				
+
 				<div class="row">
 					<div class="col-lg">
 						<div class="card">
@@ -416,12 +424,121 @@
 						</div>
 					</div>
 				</div>
-			</div>	
+			</div>
 
-			<div id="footer">
+			<div class="section blurb centered">
 				<div>
-					<p>christopher yung 2022</p>
+					<div class="blurb-header"><h1>Design</h1></div>
+					<div class="blurb-box">
+						<h2>
+							One of my greatest passions is art. I have found that I am
+							especially gifted at designing logos. Many of them started as
+							submissions to T-shirt design contests. Almost all of those
+							designs are currently being used as official logos in some
+							capacity. Here are some of the logos I have created since high
+							school.
+						</h2>
+					</div>
 				</div>
+			</div>
+
+			<div class="section">
+				<div class="title-container" id="logo-title">
+					<h1>Logos</h1>
+				</div>
+				<div class="row">
+					<div class="col-lg">
+						<div class="logo-box centered">
+							<img
+								src="./img/logos/slice logo.png"
+								class="rounded mx-auto d-block"
+								alt="website preview screen"
+							/>
+						</div>
+					</div>
+					<div class="col-lg">
+						<div class="logo-box centered">
+							<img
+								src="./img/logos/Spotistics Logo.png"
+								class="rounded mx-auto d-block"
+								alt="website preview screen"
+							/>
+						</div>
+					</div>
+					<div class="col-lg">
+						<div class="logo-box centered">
+							<img
+								src="./img/logos/purcle logo.png"
+								class="rounded mx-auto d-block"
+								alt="website preview screen"
+							/>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg">
+						<div class="logo-box centered">
+							<img
+								src="./img/logos/purdue filipino association.png"
+								class="rounded mx-auto d-block"
+								alt="website preview screen"
+							/>
+						</div>
+					</div>
+					<div class="col-lg">
+						<div class="logo-box centered">
+							<img
+								src="./img/logos/pcn logo.png"
+								class="rounded mx-auto d-block"
+								alt="website preview screen"
+							/>
+						</div>
+					</div>
+					<div class="col-lg">
+						<div class="logo-box centered">
+							<img
+								src="./img/logos/hanapin logo.png"
+								class="rounded mx-auto d-block"
+								alt="website preview screen"
+							/>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg">
+						<div class="logo-box centered">
+							<img
+								src="./img/logos/Cornerstone Christian Fellowship.png"
+								class="rounded mx-auto d-block"
+								alt="website preview screen"
+							/>
+						</div>
+					</div>
+					<div class="col-lg">
+						<div class="logo-box centered">
+							<img
+								src="./img/logos/R-Cade Club Logo.png"
+								class="rounded mx-auto d-block"
+								alt="website preview screen"
+							/>
+						</div>
+					</div>
+					<div class="col-lg">
+						<div class="logo-box centered">
+							<img
+								src="./img/logos/ChrisTShirtDesign2017.png"
+								class="rounded mx-auto d-block"
+								alt="website preview screen"
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="footer">
+			<div>
+				<p>christopher yung 2022</p>
 			</div>
 		</div>
 

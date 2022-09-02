@@ -62,7 +62,7 @@ h1 {
 
 //img
 .img {
-	max-width: 100%;
+	max-width: 100vw;
 	min-height: 100vh;
 	object-fit: contain;
 	position: absolute;
@@ -83,11 +83,13 @@ h1 {
 
 //title
 .title {
+	max-width: 100%;
 	width: 100%;
 	position: fixed;
 	top: 25vh;
 
 	justify-content: center;
+	display: flex;
 
 	z-index: -1;
 }
@@ -99,7 +101,7 @@ h1 {
 
 .title-container {
 	width: fit-content;
-	margin: auto;
+	margin: 0 auto;
 	text-align: left;
 	color: white;
 }
@@ -107,6 +109,8 @@ h1 {
 //sections
 .section {
 	min-height: 100vh;
+	margin: 0 auto;
+	width: 80%;
 
 	padding: 24px 32px;
 	//background-color: lightgrey;
@@ -133,6 +137,18 @@ h1 {
 	margin-bottom: 16px;
 }
 
+.section p {
+	font-size: 2em;
+}
+
+.section a {
+	color: lightskyblue;
+
+	&:hover {
+		color: rgb(93, 143, 173);
+	}
+}
+
 //about section
 .about img {
 	height: 400px;
@@ -145,20 +161,25 @@ h1 {
 
 #about-content {
 	padding-top: 5%;
-	margin: 0 auto;
-	width: 80%;
+
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
+#about-img {
+	max-width: 90%;
+}
+
 //blurb section
 .blurb {
 	min-height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: $primary;
+}
+
+.blurb-header {
+	font-weight: 300;
+	text-align: center;
+	margin-bottom: 48px;
 }
 
 .blurb-box {
@@ -177,19 +198,48 @@ h1 {
 	font-weight: bold;
 }
 
-// #projects {
-// 	background-color: ghostwhite; //$lavenderblue;
-// 	background-image: url(./img/japan_lake.JPEG);
-// }
+//purcle section
+.purcle-header {
+	margin-bottom: 32px;
+	display: flex;
+	align-items: flex-start;
+	align-content: flex-start;
+	text-align: left;
+}
 
-// #experience {
-// 	background-color: ghostwhite; //lavender;
-// 	background-image: url(./img/sf_ocean.jpg);
-// }
+.logo-border {
+	width: 100px;
+	height: 100px;
+	background-color: white;
+	border-radius: 50%;
+	margin: 0 auto;
+}
 
-// #reviews {
-// 	background-color: ghostwhite; //#e2e2ef;
-// }
+.logo-border img {
+	width: 100%;
+	height: 100%;
+	scale: 1.2;
+}
+
+//logos section
+#logo-title {
+	padding-top: 7%;
+	padding-bottom: 32px;
+}
+
+.logo-box {
+	background-color: lavender;
+	height: 400px;
+	width: 400px;
+	border-radius: $corners;
+	margin: 32px auto;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.logo-box img {
+	height: 400px;
+}
 
 #footer {
 	background-color: $darker;
@@ -210,6 +260,22 @@ h1 {
 
 .hidden {
 	display: none;
+}
+
+//hidden if not viewed on a mobile device
+.mobile {
+	display: none;
+}
+
+.mobile img {
+	//height: 400px;
+	max-width: 90%;
+	width: 90%;
+	margin-bottom: 24px;
+}
+
+.web {
+	display: inherit;
 }
 
 //card
@@ -234,7 +300,6 @@ h1 {
 
 .card-link {
 	cursor: pointer;
-	//color: lightskyblue;
 }
 
 .card-spacer {
@@ -369,6 +434,18 @@ $social-button-colors: (
 
 	&::after {
 		border-radius: 30px;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.mobile {
+		display: inherit;
+	}
+	.web {
+		display: none;
+	}
+	.section {
+		width: 95%;
 	}
 }
 
