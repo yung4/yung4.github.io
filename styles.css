@@ -510,7 +510,7 @@ h1 {
     padding: 24px;
   }
   .blurb h2 {
-    font-size: 1.7em;
+    font-size: 1.5em;
     font-weight: bold;
   }
   .project-title {
@@ -523,8 +523,11 @@ h1 {
   .logo-box img {
     scale: 0.9;
   }
+  .logo-description h2 {
+    font-size: 1.8em;
+  }
   .logo-description p {
-    font-size: 0.5em;
+    font-size: 0.8em;
   }
 }
 @media only screen and (max-width: 900px) {
