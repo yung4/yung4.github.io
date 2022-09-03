@@ -523,6 +523,9 @@ h1 {
   .logo-box img {
     scale: 0.9;
   }
+  .logo-description p {
+    font-size: 0.5em;
+  }
 }
 @media only screen and (max-width: 900px) {
   .section-header {

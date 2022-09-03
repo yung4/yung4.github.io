@@ -534,6 +534,10 @@ $social-button-colors: (
 	.logo-box img {
 		scale: 0.9;
 	}
+	.logo-description p {
+		font-size: 0.5em;
+		//font-weight: bold;
+	}
 }
 
 @media only screen and (max-width: 900px) {
