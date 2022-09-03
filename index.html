@@ -18,7 +18,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	</head>
 
-	<body onload="setRandomBackground()">
+	<body onload="checkMedia()">
 		<div class="title">
 			<div class="title-container">
 				<h1>hi, i'm</h1>
@@ -204,8 +204,8 @@
 						<div class="spacer"></div>
 
 						<p>
-							Built with HTML, SCSS, Javscript, Bootstrap, and deployed using
-							Github Pages
+							Built with HTML, SCSS, Javscript, Bootstrap, Greensock,
+							ScrollTrigger, and deployed using Github Pages
 						</p>
 
 						<div class="spacer"></div>
@@ -639,12 +639,25 @@
 			integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
 			crossorigin="anonymous"
 		></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+
 		<script
 			src="https://kit.fontawesome.com/cb316c2fca.js"
 			crossorigin="anonymous"
 		></script>
+		<script>
+			if (
+				!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+					navigator.userAgent
+				)
+			) {
+				document.write(
+					'<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"><\/script>'
+				);
+				document.write(
+					'<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"><\/script>'
+				);
+			}
+		</script>
 
 		<script src="./scripts/gsap.js"></script>
 		<script src="./scripts/util.js"></script>

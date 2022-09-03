@@ -1,4 +1,13 @@
 // const coverHeight = (window.innerWidth * 3) / 2;
+let mobile = false;
+
+function checkMobile() {
+	if (window.matchMedia("(max-width: 767px)").matches) {
+		// The viewport is less than 768 pixels wide
+		mobile = true;
+		console.log("mobile!");
+	}
+}
 
 // const tl = gsap.timeline({
 // 	scrollTrigger: {
@@ -58,30 +67,33 @@
 // tl.fromTo(".parallax", { scale: 10 }, { scale: 1 }, 0);
 
 //make social links appear after cover
-const socialLinks = document.querySelector(".social-container");
-console.log(socialLinks);
-const tl = gsap.timeline({
-	scrollTrigger: {
-		trigger: "#content",
-		start: "-=7%",
-		end: "-=5%",
-		scrub: true,
-	},
-});
-tl.fromTo(socialLinks, { "z-index": -3 }, { "z-index": 1, duration: 1 });
-
-//section snapping
-gsap.utils.toArray(".section").forEach((panel, i) => {
-	gsap.from(panel, {
+if (!mobile) {
+	console.log("not mobile");
+	const socialLinks = document.querySelector(".social-container");
+	console.log(socialLinks);
+	const tl = gsap.timeline({
 		scrollTrigger: {
-			trigger: panel,
+			trigger: "#content",
+			start: "-=7%",
+			end: "-=5%",
 			scrub: true,
-			pin: true,
-			start: "top top",
-			end: "+=50%",
 		},
 	});
-});
+	tl.fromTo(socialLinks, { "z-index": -3 }, { "z-index": 1, duration: 1 });
+
+	//section snapping
+	gsap.utils.toArray(".section").forEach((panel, i) => {
+		gsap.from(panel, {
+			scrollTrigger: {
+				trigger: panel,
+				scrub: true,
+				pin: true,
+				start: "top top",
+				end: "+=50%",
+			},
+		});
+	});
+}
 
 // gsap.set(".content:not(.initial)", { autoAlpha: 0 });
 
