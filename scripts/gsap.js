@@ -5,7 +5,7 @@ function checkMobile() {
 	if (window.matchMedia("(max-width: 767px)").matches) {
 		// The viewport is less than 768 pixels wide
 		mobile = true;
-		console.log("mobile!");
+		//console.log("mobile!");
 	}
 }
 
@@ -68,9 +68,9 @@ function checkMobile() {
 
 //make social links appear after cover
 if (!mobile) {
-	console.log("not mobile");
+	//console.log("not mobile");
 	const socialLinks = document.querySelector(".social-container");
-	console.log(socialLinks);
+	//console.log(socialLinks);
 	const tl = gsap.timeline({
 		scrollTrigger: {
 			trigger: "#content",
@@ -95,11 +95,11 @@ if (!mobile) {
         });
 
 		for (let j = 0; j < parents.length; j++) {
-			console.log("PARENTS", j, parents[j].children)
+			//console.log("PARENTS", j, parents[j].children)
 			children.push(parents[j].children)
 		}
 
-		console.log("CHILDREN", children)
+		//console.log("CHILDREN", children)
 
 		let direction = (i % 2)? 1 : -1;
 
