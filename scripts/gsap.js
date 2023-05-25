@@ -82,28 +82,34 @@ if (!mobile) {
 	tl.fromTo(socialLinks, { "z-index": -3 }, { "z-index": 1, duration: 1 });
 
 	// slide in and fade in animations
-    gsap.utils.toArray(".section").forEach((panel, i) => {
-        const parents = panel.children;
+	gsap.utils.toArray(".section").forEach((panel, i) => {
+		const parents = panel.children;
 		let children = [];
-        const paneltl = gsap.timeline({
-            scrollTrigger: {
-                trigger: panel,
-                scrub: true,
-                start: "top center",
-                end: "+=50%",
-            },
-        });
+		const paneltl = gsap.timeline({
+			scrollTrigger: {
+				trigger: panel,
+				scrub: 3,
+				start: "top 25%",
+				end: "+=20%",
+				once: true,
+				//markers: true,
+			},
+		});
 
 		for (let j = 0; j < parents.length; j++) {
 			//console.log("PARENTS", j, parents[j].children)
-			children.push(parents[j].children)
+			children.push(parents[j].children);
 		}
 
 		//console.log("CHILDREN", children)
 
-		let direction = (i % 2)? 1 : -1;
+		let direction = i % 2 ? 1 : -1;
 
-		paneltl.fromTo(children, {opacity: 0, x: 100 * direction, duration: 1}, {opacity: 1, x: 0, duration: 5, stagger: 0.7});
+		paneltl.fromTo(
+			children,
+			{ opacity: 0, x: 100 * direction, duration: 1 },
+			{ opacity: 1, x: 0, duration: 5, stagger: 0.7 }
+		);
 	});
 
 	//section snapping
