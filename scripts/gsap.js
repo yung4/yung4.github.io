@@ -89,19 +89,16 @@ if (!mobile) {
 			scrollTrigger: {
 				trigger: panel,
 				scrub: 3,
-				start: "top 25%",
-				end: "+=20%",
+				start: "center bottom",
+				end: "+=1%",
 				once: true,
-				//markers: true,
+				// markers: true,
 			},
 		});
 
 		for (let j = 0; j < parents.length; j++) {
-			//console.log("PARENTS", j, parents[j].children)
 			children.push(parents[j].children);
 		}
-
-		//console.log("CHILDREN", children)
 
 		let direction = i % 2 ? 1 : -1;
 
