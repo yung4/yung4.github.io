@@ -90,7 +90,7 @@ if (!mobile) {
 				trigger: panel,
 				scrub: 3,
 				start: "center bottom",
-				end: "+=1%",
+				end: "+=5",
 				once: true,
 				// markers: true,
 			},
